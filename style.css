@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10; /* Asegura que el menú esté por encima del canvas */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+}
+
+#logo {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    color: #333;
+}
+
+p {
+    margin: 10px 0;
+    color: #555;
+    font-size: 1.2em; /* Tamaño de fuente */
+}
+
+label {
+    margin: 10px 0;
+}
+
+input, select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+#gameCanvas {
+    border: 2px solid #333;
+    display: none; /* Oculta el canvas inicialmente */
+}
+
+#scoreDisplay {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #333;
+    display: none; /* Oculta el puntaje inicialmente */
+}
+
+#scoreTable {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#scoreTable th, #scoreTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#scoreTable th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.animate {
+    animation: scoreAnim 1s forwards;
+}
+
+@keyframes scoreAnim {
+    transform: scale(1.5);
+    opacity: 1;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monito con Hambre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu" class="menu">
+        <img id="logo" src="logo.png" alt="Logo del Juego">
+        <h1>Monito con Hambre</h1>
+        <p>¡Come frutas para crecer y evita chocar!</p>
+        <label for="playerName">Ingresa tu nombre:</label>
+        <input type="text" id="playerName" placeholder="Tu nombre aquí" required>
+        <label for="numFruits">Selecciona el número de frutas:</label>
+        <select id="numFruits">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+        </select>
+        <button id="startGame">Iniciar Juego</button>
+        <h2>Récords</h2>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Puntuación</th>
+                </tr>
+            </thead>
+            <tbody id="scoreBody">
+                <!-- Aquí se llenarán los registros de puntuación -->
+            </tbody>
+        </table>
+    </div>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="scoreDisplay" class="score-display">Puntos: 0</div>
+    <script src="script.js"></script>
+</body>
+</html>
